@@ -5,6 +5,15 @@ const registerSchema=new mongose.Schema({
     },
     phone:{
         type:String
+    },
+    email:{
+        type:String
+    },
+    password:{
+        type:String
+    },
+    loginJwt: {
+        type:String
     }
 },{
     timestamps:true

@@ -1,4 +1,4 @@
-const {body}=require("express-validator")
+const {body,query}=require("express-validator")
 const {UserNotFoundError} =require("../errors/")
 const Register=require("../models/Register")
 module.exports={
@@ -17,5 +17,10 @@ module.exports={
                 throw new UserNotFoundError("we don't find your email in our system")
             })
         })
+    ],
+    getuserV:[
+        query('limit').optional().isInt({ min: 1, max: 100 }).withMessage("Limit must be a number between 1 to 100").toInt(),
+        query('page').optional().isInt({ min: 1, max: 100 }).withMessage("Page must be a number between 1 to 100").toInt(),
+        query('q').optional().isString().withMessage("Query must be a string").matches(/^[\w\s]+$/g).withMessage("Only alphanumeric characters allowed").toLowerCase().trim()
     ]
 }

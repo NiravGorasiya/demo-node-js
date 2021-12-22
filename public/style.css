@@ -1,0 +1,46 @@
+.container{
+    background-color: cadetblue;
+    color: brown;
+    width: 600px;
+    height: 500px;
+    display: block;
+    margin: auto;
+}
+
+.message{
+    font-size: 25px;
+}
+
+.left{
+    float:left;
+    clear:both;
+}
+.right{
+    float:right;
+    clear: both;
+}
+
+#messagetage{
+ display: block;
+ margin: auto;   
+}
+
+.inputmessage{
+ color: #000;
+}
+
+#form{
+    text-align:center;
+}
+
+#inputmessage{
+    margin-top:10px;
+    width:535px;
+    height:30px;
+}
+
+.btn{
+    width:50px;
+    height:35px;
+}
+
